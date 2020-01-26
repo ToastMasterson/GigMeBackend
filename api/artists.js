@@ -16,6 +16,9 @@ router.post('/artists', async (req, res) => {
         const newArtist = await Artist
             .query(trx)
             .insertAndFetch(body)
+            .catch(function(error) {
+                console.error(error)
+            })
         res.send(newArtist)
     })
 })
@@ -23,11 +26,17 @@ router.post('/artists', async (req, res) => {
 router.patch('/artists/:id', (req, res) => {
     Artist.query()
     .patchAndFetchById(req.params.id, req.body)
+    .catch(function(error) {
+        console.error(error)
+    })
     .then(artist => res.json(artist))
 })
 
 router.delete('/artists/:id', (req, res) => {
     Artist.query().deleteById(req.params.id)
+    .catch(function(error) {
+        console.error(error)
+    })
     res.send("Artist successfully deleted from records")
 })
 
