@@ -1,7 +1,13 @@
+require('dotenv').config()
+
+// Update with your config settings.
+
+require('dotenv').config()
+
 module.exports = {
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/test_db',
+    connection: `${process.env.DATABASE_URL}?ssl=true`,
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -11,7 +17,7 @@ module.exports = {
   },
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/development_db',
+    connection: `${process.env.DATABASE_URL}?ssl=true`,
     migrations: {
       directory: __dirname + '/db/migrations'
     },
@@ -21,7 +27,7 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: `${process.env.DATABASE_URL}?ssl=true`,
     migrations: {
       directory: __dirname + '/db/migrations'
     },
