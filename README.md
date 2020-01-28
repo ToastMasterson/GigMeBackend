@@ -17,3 +17,29 @@ I will update as I keep building.
 Thank you and enjoy!
 
 -Tyler CW Masterson
+
+///Current Log///
+
+1/26/20
+Users:
+    Eventually there will be two sets of users.  Artists and Booking Agents.
+    The full app exprience truly belongs to the Artists, however.
+
+    I quickly constructed a schema for Artist Users and their profiles and contact lists
+
+    Previously I stacked most of a user's information into one table, including all of their profile information, music, and photos/videos
+
+    This time I will be separating each into it's own table.
+
+    For the purposes of sticking with thin vertical slices, I will simply need a user to log in, fetch their profile info, and load a page displaying some of that data.
+
+    I'm using Node.js with Knex, Express, Objection and PostgreSQL (heroku)
+
+    after migrating the tables to the schema, I quickly coded the model files for each table, and created basic CRUD controller actions for each model.
+
+    So far I can get, post, patch and delete artists, their profiles and their contact information.
+
+    Next step is to implement 
+
+    Hey! My name is Tyler and I’m a web developer looking to build connections with other local developers in Denver. I’m wondering if you have time to connect to share your experiences working in your current position or former positions as a developer.
+Thanks!
