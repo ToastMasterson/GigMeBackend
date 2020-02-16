@@ -39,7 +39,3 @@ Users:
 
     So far I can get, post, patch and delete artists, their profiles and their contact information.
 
-    Next step is to implement 
-
-    Hey! My name is Tyler and I’m a web developer looking to build connections with other local developers in Denver. I’m wondering if you have time to connect to share your experiences working in your current position or former positions as a developer.
-Thanks!
