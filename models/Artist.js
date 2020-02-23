@@ -11,9 +11,6 @@ class Artist extends Model {
     static get relationMappings() {
         const ArtistProfile = require('./ArtistProfile')
         const ArtistContact = require('./ArtistContact')
-        const ArtistPhoto = require('./ArtistPhoto')
-        const ArtistTrack = require('./ArtistTrack')
-        const ArtistPost = require('./ArtistPost')
         return {
             artist_profile: {
                 relation: Model.HasOneRelation,
@@ -30,9 +27,6 @@ class Artist extends Model {
                     from: 'artists.id',
                     to: 'artist_contacts.artist_id'
                 }
-            },
-            artist_gi: {
-                relation: Model.Has
             }
         }
     }
